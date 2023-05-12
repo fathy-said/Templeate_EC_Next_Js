@@ -26,7 +26,7 @@ export default function Home(props) {
             </Button> */}
             <Head>
                 <title>My page </title>
-                <meta property="description" content="My page title" />
+                <meta name="description" content="My page title" />
             </Head>
             <div className="container">
                 <SliderBox />
