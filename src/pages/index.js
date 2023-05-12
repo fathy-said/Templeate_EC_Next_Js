@@ -27,6 +27,8 @@ export default function Home(props) {
             <Head>
                 <title>My page </title>
                 <meta name="description" content="My page title" />
+                <meta name="Googlebot" content="noindex" />
+                <meta name="robots" content="noindex" />
             </Head>
             <div className="container">
                 <SliderBox />
