@@ -23,33 +23,33 @@ const Header = () => {
                     <div className={style.nav_top}>
                         <ul className={style.box_left}>
                             <li>
-                                <a href="">Seller Center</a>
+                                <a href="#a">Seller Center</a>
                             </li>
                             <li>
-                                <a href="">Download</a>
+                                <a href="#a">Download</a>
                             </li>
                             <li>
                                 Follow
-                                <a href="">
+                                <a href="#a">
                                     <IoLogoFacebook />
                                 </a>
-                                <a href="">
+                                <a href="#a">
                                     <IoLogoInstagram />
                                 </a>
                             </li>
                         </ul>
                         <ul className={style.box_right}>
                             <li>
-                                <a href="">
+                                <a href="#a">
                                     <AiFillQuestionCircle />
                                     Support
                                 </a>
                             </li>
                             <li>
-                                <a href="">Register</a>
+                                <a href="#a">Register</a>
                             </li>
                             <li>
-                                <a href="">Log in</a>
+                                <a href="#a">Log in</a>
                             </li>
                         </ul>
                     </div>
