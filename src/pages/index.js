@@ -14,7 +14,6 @@ import ProductBox from "@/Components/ProductBox/ProductBox";
 import axios from "axios";
 
 export default function Home(props) {
-    console.log(props);
     let dispatch = useDispatch();
     return (
         <>
@@ -25,6 +24,10 @@ export default function Home(props) {
             >
                 body
             </Button> */}
+            <Head>
+                <title>My page </title>
+                <meta property="description" content="My page title" />
+            </Head>
             <div className="container">
                 <SliderBox />
                 <TitleBox text={`SEE OUR PRODUCTS`} />
@@ -52,6 +55,142 @@ export default function Home(props) {
                                           />
                                       </Link>
                                   );
+                              })
+                            : null}
+                    </ContainerProduct>
+                ) : (
+                    "Not found"
+                )}
+                {/* =========================== */}
+                <TitleBox text={`SMART PHONES`} />
+                {props.loading ? (
+                    "loading"
+                ) : props.status == 200 ? (
+                    <ContainerProduct>
+                        {props.products.length
+                            ? props.products.map((pro) => {
+                                  if (pro.category === "smartphones") {
+                                      return (
+                                          <Link
+                                              href={"/detail/" + pro.id}
+                                              key={pro.id}
+                                          >
+                                              <ProductBox
+                                                  img={pro.thumbnail}
+                                                  price={pro.price}
+                                                  discountPercentage={
+                                                      pro.discountPercentage
+                                                  }
+                                                  category={pro.category}
+                                                  id={pro.id}
+                                                  name={pro.title}
+                                                  brand={pro.brand}
+                                              />
+                                          </Link>
+                                      );
+                                  }
+                              })
+                            : null}
+                    </ContainerProduct>
+                ) : (
+                    "Not found"
+                )}
+                {/* =========================== */}
+                <TitleBox text={`LAPTOPS`} />
+                {props.loading ? (
+                    "loading"
+                ) : props.status == 200 ? (
+                    <ContainerProduct>
+                        {props.products.length
+                            ? props.products.map((pro) => {
+                                  if (pro.category === "laptops") {
+                                      return (
+                                          <Link
+                                              href={"/detail/" + pro.id}
+                                              key={pro.id}
+                                          >
+                                              <ProductBox
+                                                  img={pro.thumbnail}
+                                                  price={pro.price}
+                                                  discountPercentage={
+                                                      pro.discountPercentage
+                                                  }
+                                                  category={pro.category}
+                                                  id={pro.id}
+                                                  name={pro.title}
+                                                  brand={pro.brand}
+                                              />
+                                          </Link>
+                                      );
+                                  }
+                              })
+                            : null}
+                    </ContainerProduct>
+                ) : (
+                    "Not found"
+                )}
+                {/* =========================== */}
+                <TitleBox text={`FRAGRANCES`} />
+                {props.loading ? (
+                    "loading"
+                ) : props.status == 200 ? (
+                    <ContainerProduct>
+                        {props.products.length
+                            ? props.products.map((pro) => {
+                                  if (pro.category === "fragrances") {
+                                      return (
+                                          <Link
+                                              href={"/detail/" + pro.id}
+                                              key={pro.id}
+                                          >
+                                              <ProductBox
+                                                  img={pro.thumbnail}
+                                                  price={pro.price}
+                                                  discountPercentage={
+                                                      pro.discountPercentage
+                                                  }
+                                                  category={pro.category}
+                                                  id={pro.id}
+                                                  name={pro.title}
+                                                  brand={pro.brand}
+                                              />
+                                          </Link>
+                                      );
+                                  }
+                              })
+                            : null}
+                    </ContainerProduct>
+                ) : (
+                    "Not found"
+                )}
+                {/* =========================== */}
+                <TitleBox text={`SKINCARE`} />
+                {props.loading ? (
+                    "loading"
+                ) : props.status == 200 ? (
+                    <ContainerProduct>
+                        {props.products.length
+                            ? props.products.map((pro) => {
+                                  if (pro.category === "skincare") {
+                                      return (
+                                          <Link
+                                              href={"/detail/" + pro.id}
+                                              key={pro.id}
+                                          >
+                                              <ProductBox
+                                                  img={pro.thumbnail}
+                                                  price={pro.price}
+                                                  discountPercentage={
+                                                      pro.discountPercentage
+                                                  }
+                                                  category={pro.category}
+                                                  id={pro.id}
+                                                  name={pro.title}
+                                                  brand={pro.brand}
+                                              />
+                                          </Link>
+                                      );
+                                  }
                               })
                             : null}
                     </ContainerProduct>
