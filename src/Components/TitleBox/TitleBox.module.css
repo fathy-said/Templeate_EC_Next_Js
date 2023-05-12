@@ -1,0 +1,25 @@
+.title_box {
+  background-color: var(--back-color-3);
+  margin-bottom: var(--margin-bottom);
+  margin-top: var(--margin-top);
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.title_box h2 {
+  margin: 0;
+  padding: 10px 10px 10px 30px;
+  text-transform: uppercase;
+  font-size: var(--fnt-header-2);
+  color: var(--font-color-4);
+}
+
+.title_box span {
+  background-color: var(--main-color-2);
+  height: 100%;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

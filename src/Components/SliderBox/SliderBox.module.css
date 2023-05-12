@@ -1,0 +1,12 @@
+.swiper_slide {
+  margin-top: 20px;
+  background-color: var(--main-color-2);
+}
+
+
+
+.swiper_slide img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}

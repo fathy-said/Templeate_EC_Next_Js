@@ -1,6 +1,5 @@
 import { useState } from "react";
 // import { searchProduct } from "../../RTK/Thunk/SearchProduct";
-// import "./Header.module.css";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { FaShoppingBag } from "react-icons/fa";
 import { TbMenu2 } from "react-icons/tb";
@@ -20,7 +19,7 @@ const Header = () => {
     return (
         <>
             <div className={style.navbar_box}>
-                <div className="container">
+                <div className="container said">
                     <div className={style.nav_top}>
                         <ul className={style.box_left}>
                             <li>
