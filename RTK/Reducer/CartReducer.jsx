@@ -34,6 +34,9 @@ let cartReducer = createSlice({
                 if (findProduct) {
                     findProduct.productCount = action.payload.quantity;
                 }
+                else {
+                    state.cart.push({ ...action.payload.detailsData, productCount: action.payload.quantity });
+                }
             }
             if (action.payload.type === "decrease") {
                 let findProduct = state.cart.find(
