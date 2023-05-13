@@ -51,7 +51,7 @@ export async function getStaticPaths(context) {
 export async function getStaticProps(context) {
   let res = await getDataFromApi(`products/category/${context.params.category_name}`);
   return {
-    props: { ...res, name: context.params.category_name }, // will be passed to the page component as props
+    props: { ... await res, name: context.params.category_name }, // will be passed to the page component as props
   };
 }
 
