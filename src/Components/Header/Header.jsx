@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 // import { searchProduct } from "../../RTK/Thunk/SearchProduct";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { FaShoppingBag } from "react-icons/fa";
@@ -10,12 +10,37 @@ import style from "./Header.module.css";
 // import { chickSearch } from "../../RTK/Reducer/SearchReducer";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { searchProduct } from "../../../RTK/Thunk/SearchProduct";
+import { chickSearch } from "../../../RTK/Reducer/SearchReducer";
 const Header = () => {
     let { cart } = useSelector((state) => state.CartReducer);
-
     let [menuActive, setMenuActive] = useState("");
+
+    let dispatch = useDispatch();
+
     let router = useRouter();
+    const handleSearch = useCallback(
+        (e) => {
+            if (e.target.value.length > 0) {
+                // console.log(e.target.value);
+                //  dispatch(chickSearch({ type: true }));
+                dispatch(
+                    searchProduct({
+                        title: e.target.value,
+                    })
+                );
+                router.push("/");
+
+                // dispatch(searchProduct({ title: 'iphone' }))
+            } else {
+                dispatch(chickSearch({ type: false }));
+                // console.log("empty");
+            }
+        },
+        [router, dispatch]
+    );
+
     return (
         <>
             <div className={style.navbar_box}>
@@ -79,24 +104,7 @@ const Header = () => {
                                     name=""
                                     id=""
                                     placeholder="Search your preferred items here"
-                                    onChange={(e) => {
-                                        // if (e.target.value.length > 0) {
-                                        //     //     dispatch(
-                                        //     //         searchProduct({
-                                        //     //             title: e.target.value,
-                                        //     //         })
-                                        //     //     );
-                                        //     //     // dispatch(searchProduct({ title: 'iphone' }))
-                                        //     //     dispatch(
-                                        //     //         chickSearch({ type: true })
-                                        //     //     );
-                                        //     //     router.push("/");
-                                        //     // } else {
-                                        //     //     dispatch(
-                                        //     //         chickSearch({ type: false })
-                                        //     //     );
-                                        // }
-                                    }}
+                                    onChange={handleSearch}
                                 />
                                 <button>
                                     <HiOutlineSearch />
@@ -159,20 +167,7 @@ const Header = () => {
                                 name=""
                                 id=""
                                 placeholder="Search your preferred items here"
-                                onChange={(e) => {
-                                    // if (e.target.value.length > 0) {
-                                    //     dispatch(chickSearch({ type: true }));
-                                    //     dispatch(
-                                    //         searchProduct({
-                                    //             title: e.target.value,
-                                    //         })
-                                    //     );
-                                    //     router.push("/");
-                                    //     // dispatch(searchProduct({ title: 'iphone' }))
-                                    // } else {
-                                    //     dispatch(chickSearch({ type: false }));
-                                    // }
-                                }}
+                                onChange={handleSearch}
                             />
                             <button>
                                 <HiOutlineSearch />
