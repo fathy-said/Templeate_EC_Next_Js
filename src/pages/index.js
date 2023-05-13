@@ -16,23 +16,15 @@ import LoadingBox from "@/Components/LoadingBox/LoadingBox";
 
 export default function Home(props) {
     let { searchData } = useSelector((state) => state.SearchReducer);
-    // console.log(searchData);
 
     let dispatch = useDispatch();
     return (
         <>
-            {/* <Button
-                onClick={() => {
-                    dispatch(testAction());
-                }}
-            >
-                body
-            </Button> */}
+
             <Head>
-                <title>My page </title>
-                <meta name="description" content="My page title" />
-                <meta name="Googlebot" content="noindex" />
-                <meta name="robots" content="noindex" />
+                <title>My store </title>
+                <meta name="description" content="My page home description" />
+
             </Head>
 
             <div className="container">

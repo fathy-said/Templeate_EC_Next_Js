@@ -1,11 +1,17 @@
 import CategoryBox from "@/Components/Pages/CategoryBox/CategoryBox";
 import axios from "axios";
+import Head from "next/head";
 // import { fun_data } from '@/Util/getDataFromApi';
 import React from "react";
 
 const CategoryPage = (props) => {
   return (
     <>
+      <Head>
+        <title>My store </title>
+        <meta name="description" content="My page category description" />
+
+      </Head>
       <CategoryBox {...props} />
     </>
   );

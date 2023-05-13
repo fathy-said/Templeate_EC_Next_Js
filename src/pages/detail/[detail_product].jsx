@@ -1,10 +1,16 @@
 import DetailsBox from '@/Components/Pages/DetailBox/DetailsBox';
 import axios from 'axios';
+import Head from 'next/head';
 import React from 'react';
 
 const Detail = (props) => {
   return (
     <>
+      <Head>
+        <title>My store </title>
+        <meta name="description" content="My page detail description" />
+
+      </Head>
       <DetailsBox {...props} />
     </>
   );

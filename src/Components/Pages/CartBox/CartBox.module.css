@@ -1,0 +1,215 @@
+.cart_box {
+  margin-top: 50px;
+}
+
+
+
+.box_table {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 1296px;
+
+}
+
+.table thead {}
+
+.table thead tr {
+  background-color: var(--back-color-3);
+}
+
+.table thead tr th {
+  width: 190px;
+
+  color: var(--font-color-2);
+  font-size: var(--fnt-16px);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.table thead tr th:nth-child(1) {
+  width: 30px;
+
+}
+
+.table thead tr th:nth-child(2) {
+
+  width: 320px;
+
+}
+
+.table thead tr th div {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.table tbody {
+
+  background-color: var(--back-color-3);
+}
+
+.table tbody tr {}
+
+.table tbody tr td div {
+  padding-top: 15px;
+
+}
+
+.table tbody tr td div img {
+  width: 100px;
+  border-radius: 4px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.table tbody tr td div p {
+  font-size: var(--fnt-14px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--font-color-2);
+  text-transform: capitalize;
+}
+
+.table tbody tr td:nth-child(4) {
+  text-transform: capitalize;
+  color: var(--font-color-3);
+  font-weight: 500;
+  font-size: var(--fnt-17px);
+
+
+}
+
+.table_empty {
+  height: 30px;
+  width: 100%;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+}
+
+
+
+.quantity div {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid var(--border-color-1);
+}
+
+.quantity div button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: var(--fnt-22px);
+  font-weight: 500;
+  border: none;
+  border: 1px solid transparent;
+
+}
+
+
+.quantity div span {
+  padding: 5px 10px;
+  font-size: var(--fnt-16px);
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-left-color: var(--border-color-1);
+  border-right-color: var(--border-color-1);
+}
+
+.table tbody tr td:nth-child(6) {
+  text-transform: capitalize;
+  color: var(--main-color-2);
+  font-weight: 500;
+  font-size: var(--fnt-17px);
+
+
+}
+
+.table tbody tr td:nth-child(7) button {
+  all: unset;
+  cursor: pointer;
+  color: var(--font-color-2);
+  font-size: var(--fnt-17px);
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: var(--transition);
+
+}
+
+.table tbody tr td:nth-child(7) button:hover {
+  color: var(--main-color-2);
+
+
+}
+
+.info {
+  background-color: var(--back-color-3);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.info button {
+  border: 2px solid var(--main-color-2);
+  background-color: transparent;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  font-size: var(--fnt-17px);
+  font-weight: 500;
+  color: var(--main-color-2);
+  transition: var(--transition);
+}
+
+.info button:hover {
+  background-color: var(--main-color-2);
+  font-size: var(--fnt-17px);
+  color: var(--font-color-1);
+}
+
+.info button svg {
+  margin-bottom: 4px;
+  margin-right: 2px;
+  font-size: var(--fnt-20px);
+}
+
+.info_box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info_box h6 {
+  margin: 0;
+  font-size: var(--fnt-17px);
+  color: var(--font-color-5);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.info_box h6 span {
+
+  color: var(--main-color-2);
+}
+
+.info_box button {
+
+  background-color: var(--main-color-2);
+  font-size: var(--fnt-17px);
+  color: var(--font-color-1);
+}
